@@ -23,6 +23,7 @@
       display: flex;
       justify-content: center;
       background: #333;
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -37,9 +38,21 @@
 
     .hero {
       text-align: center;
-      padding: 50px;
+      padding: 50px 20px;
       background: url('https://images.unsplash.com/photo-1600891965054-4f2c1e6c6f95') no-repeat center/cover;
       color: white;
+    }
+
+    .search-bar {
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .search-bar input {
+      padding: 10px;
+      width: 60%;
+      border: 1px solid #ccc;
+      border-radius: 8px;
     }
 
     .container {
@@ -55,11 +68,65 @@
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
     }
 
     .card img {
       width: 100%;
       border-radius: 12px;
+    }
+
+    .order-btn {
+      background: #ff6b6b;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .order-btn:hover {
+      background: #e84141;
+    }
+
+    .reviews, .newsletter {
+      text-align: center;
+      padding: 40px 20px;
+      background: #fff;
+      margin: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .review {
+      margin: 15px 0;
+      font-style: italic;
+    }
+
+    .newsletter input {
+      padding: 10px;
+      width: 60%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin: 10px 0;
+    }
+
+    .newsletter button {
+      background: #ff6b6b;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .newsletter button:hover {
+      background: #e84141;
     }
 
     footer {
@@ -88,24 +155,50 @@
     <p>Order your favorite meals anytime, anywhere!</p>
   </section>
 
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" placeholder="Search your favorite food...">
+  </div>
+
+  <!-- Food Menu -->
   <section class="container">
     <div class="card">
       <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc" alt="Pizza">
       <h3>Pizza</h3>
       <p>Cheesy and delicious pizza made fresh.</p>
+      <button class="order-btn">Order Now</button>
     </div>
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1604908816310-3a48d0fbbf12" alt="Burger">
       <h3>Burger</h3>
       <p>Juicy burgers with fresh ingredients.</p>
+      <button class="order-btn">Order Now</button>
     </div>
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1565958011703-44e72407a0fb" alt="Pasta">
       <h3>Pasta</h3>
       <p>Creamy pasta with Italian flavors.</p>
+      <button class="order-btn">Order Now</button>
     </div>
+  </section>
+
+  <!-- Customer Reviews -->
+  <section class="reviews">
+    <h2>⭐ Customer Reviews</h2>
+    <p class="review">"Best food delivery service ever!" - Anusha</p>
+    <p class="review">"Pizza was so fresh and hot 🔥" - Rahul</p>
+    <p class="review">"Loved the quick service and taste." - Priya</p>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <h2>📩 Subscribe to Our Newsletter</h2>
+    <p>Get updates about new dishes and offers.</p>
+    <input type="email" placeholder="Enter your email">
+    <br>
+    <button>Subscribe</button>
   </section>
 
   <footer>
